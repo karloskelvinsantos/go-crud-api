@@ -1,0 +1,30 @@
+### CREATE - Criar nova tarefa
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+    "title": "Estudar Spring Boot",
+    "description": "Melhorar conhecimentos em Spring Boot",
+    "completed": false,
+    "due_date": "2021-12-31T23:59:00Z"
+}
+
+###
+
+### LIST - Listar todas as tarefas
+GET http://localhost:8080/tasks
+
+###
+
+### UPDATE - Atualizar tarefa
+PUT http://localhost:8080/tasks/67cf298e93cb599a79e203ea
+Content-Type: application/json
+
+{
+    "title": "Estudar Spring Boot",
+    "description": "Melhorar conhecimentos em Spring Boot",
+    "completed": true
+}
+
+### DELETE - Deletar tarefa
+DELETE http://localhost:8080/tasks/67cf298e93cb599a79e203ea
